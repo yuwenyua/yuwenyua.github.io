@@ -13,3 +13,6 @@
 ###### 巨量引擎
 ###### 巨量纵横
 <https://business.oceanengine.com/>
+
+###### 磁力智投
+<https://ad.e.kuaishou.com/index>
