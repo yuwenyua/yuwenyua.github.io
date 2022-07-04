@@ -7,6 +7,8 @@
 # 运营管理后台
 ## 新版正式后台 <http://47.93.113.113/portal/login.do>
 
+## 数据后台 <http://101.200.172.198:3000/login>
+
 # 投放后台
 ## 巨量引擎-巨量纵横 <https://business.oceanengine.com/>
 
