@@ -13,3 +13,6 @@
 ## 巨量引擎-巨量纵横 <https://business.oceanengine.com/>
 
 ## 磁力智投 <https://ad.e.kuaishou.com/index>
+
+# 个人
+## notion <https://www.notion.so/dd2f1057161643a48157fd5e266e02bc>
