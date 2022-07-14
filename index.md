@@ -16,3 +16,5 @@
 
 # 个人
 ## notion <https://www.notion.so/dd2f1057161643a48157fd5e266e02bc>
+
+## 热云素材观测 <http://39.104.98.139/#/>
