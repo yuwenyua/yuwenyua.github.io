@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0 , user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title></title>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<style>
+			* {
+				font-size: 0.29rem;
+				box-sizing: border-box;
+				text-decoration: none;
+				list-style:none;
+				padding:0;
+				margin:0 auto;
+			}
+			
+			body,html {
+				background: #fff;
+				width: 100%;
+				font-family: "微软雅黑";
+				background: url(/img/agree4.png) center 5% no-repeat;
+    			background-size: 90%;
+				height:100%;
+				margin: 0 auto;
+			}
+			.wraps{
+				width:100%;
+			}
+			@media only screen and (min-width: 750px){
+				body {
+				    width: 750px;
+				}
+			}
+			.main{
+				width: 80%;
+				/* padding: 0.5rem 5% 0; */
+				margin-left:10%;
+			}
+			.banner h2{
+				text-align:center;
+				font-size: 0.48rem;
+				color:#414141;
+				padding-top:1.4rem;
+				letter-spacing: 2px;
+			}
+			.main p{
+				line-height: 0.62rem;
+				color:#A6A6A6;
+			}
+			.prinfo{
+				padding-left: 0.7rem;
+				text-align: justify;
+				margin-bottom: 0.5rem;
+    			margin-top: 0.07rem;
+				line-height: 0.5rem !important;
+			}
+			.toinfo{
+				text-decoration: none;
+			}
+			.banner{
+				width:100%;
+			}
+			/* .banner>img{
+				width:100%;
+				display:block;
+			} */
+			.tit{
+				text-indent: 1em;
+				margin-top: 0.6rem;
+    			margin-bottom: 0.45rem;
+				font-size:0.36rem;
+				letter-spacing: 1px;
+				text-align: justify;
+				color:#8D8D8D !important;
+			}
+			.content{
+				font-size: 0.34rem;
+				color:#8D8D8D !important;
+				font-weight: bold;
+				position: relative;
+				padding-left:0.7rem;
+			}
+			.content>img{
+				width: 0.35rem;
+				position: absolute;
+				left:0;
+				top:0;
+				opacity: 0.7;
+			}
+			.experience{
+				width:50%;
+				height:0.8rem;
+				line-height: 0.8rem;
+				border-radius: 100px;
+				color:#fff;
+				background:#D91308;
+				font-size:0.35rem;
+				text-align: center;
+				margin-left:25%;
+				margin-top:0.7rem;
+				letter-spacing: 2px;
+			}
+			.think{
+				width:50%;
+				/* height:0.8rem; */
+				/* line-height: 0.8rem; */
+				border-radius: 100px;
+				color:#999999;
+				font-size:0.35rem;
+				text-align: center;
+				margin-left:25%;
+				margin-top:0.3rem;
+				letter-spacing: 2px;
+			}
+			.footer{
+				position: absolute;
+				width:100%;
+				bottom:0.5rem;
+			}
+		</style>
+		<script>
+			var index = 120;
+			var articlenum = 10;
+			//设置rem
+			function mobilecal() {
+				var size = 100, //规定rem与px之间值的转换
+					maxWidth = 750; //设置基准宽度。
+				ratio = function() {
+					var r = document.documentElement.clientWidth / maxWidth;
+					return r >= 1 ? 1 : r <= 0.234 ? 0.234 : r;
+				};
+				set = function() {
+					document.documentElement.style.fontSize = ratio() * size + 'px';
+				}();
+				window.onresize = mobilecal;
+			}
+			mobilecal();
+		</script>
+	</head>
+
+	<body>
+		<div class="wraps">
+			<div class="banner">
+					<h2>欢迎使用快来计步</h2>
+			</div>
+			<div class="main">
+				<p class="tit">为了给您提供优质，个性化的服务，快来计步将向您申请以下权限：</p>
+				<div id="isandroid">
+					<p class="content"><img src="/img/agree2.png" style="width:0.5rem;top:0.1rem">电话</p>
+					<p class="prinfo">通过电话权限确定本机设备ID，以便为您推送个性化的内容</p>
+					<p class="content"><img src="/img/agree3.png" style="width:0.4rem;left:0.01rem;top:0.06rem">位置</p>
+					<p class="prinfo">通过位置信息权限，获得您所在位置，以为您记录运动数据</p>
+					<p class="content"><img src="/img/agree1.png" style="top:0.1rem">存储</p>
+					<p class="prinfo">通过读写SD卡权限，缓存图片等信息，节省手机内存空间</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://jkdcdn.jukandiannews.com/extendresouce/js/jquery-1.12.4.min.js"></script>
+		<script>
+			 //获取?后的参数
+			var _height;
+			var href = location.href;
+			var matches = href.match(/\?height=([^&]+)/);
+			if (matches) {
+				_height = matches[1];
+				if( _height<=1800){
+					$(".banner h2").css("padding-top","10%");
+					$(".prinfo").css({"margin-bottom":"0.2rem","line-height":"0.45rem"});
+					$(".tit").css({"margin-bottom":"0.2rem","margin-top":"0.3rem","font-size":"0.34rem"});
+					$(".content").css("font-size","0.32rem");
+				}
+			}
+		    
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
