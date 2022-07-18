@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>开始使用 layui</title>
     <link href="./layui/css/layui.css" rel="stylesheet">
+    <script>
+        //拆分cookie      
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+        }
+        return "";
+    }
+
+    //保存，计算，初始化cookie
+    function checkCookie() {
+        //  document.cookie="test1=dkdjfjk";
+        //  alert(document.cookie);
+        if (Number(getCookie("test1")) >= 1) {
+
+            var x = Number(getCookie("test1"));
+            x++;
+            document.cookie = "test1=" + x;
+            //  alert(document.cookie);
+            document.getElementById("button").innerHTML = getCookie("test1");
+        } else { document.cookie = "test1=1"; }
+
+
+    }
+    </script>
 </head>
 
 <body>
     <script src="./layui/layui.js"></script>
     <script>
-    layui.use(['layer', 'form'], function() {
+        layui.use(['layer', 'form'], function() {
         var layer = layui.layer;
         var form = layui.form;
 
@@ -57,6 +85,11 @@
                             <blockquote class="layui-elem-quote layui-quote-nm">热云素材观测 </blockquote>
                         </a></h2>
     </div>
+    <button onclick="checkCookie()" id="button" type="button" class="layui-btn layui-btn-fluid">
+        <script>
+        document.write(getCookie("test1"));
+        </script>
+    </button>
 </body>
 
 </html>
