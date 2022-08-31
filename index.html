@@ -45,8 +45,10 @@
         if (Number(getCookie(key)) >= 1) {
 
             var x = Number(getCookie(key));
+            var date = new Date();
+            date.setTime(date.getTime() + 2592000000);
             x++;
-            document.cookie = key + "=" + x;
+            document.cookie = key + "=" + x;expires + "=" + date.toUTCString()
             document.getElementById(key).innerHTML = getCookie(key);
         } else { document.cookie = key + "=" + 1; }
 
@@ -87,20 +89,20 @@
                     <br>
                     <h2><a href="https://manager.18zhuanqian.com/login?redirect=%2Findexn" target="_blank">
                             <blockquote onclick="checkCookie('button1')" class="layui-elem-quote ">正式
-                                <div id="button1">
+                                <a id="button1">
                                     <script>
                                     document.write(getCookie("button1"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="http://job.bas.com/job-admin/toLogin" target="_blank">
                             <blockquote onclick="checkCookie('button2')" class="layui-elem-quote ">广告调度vpn
-                                <div id="button2">
+                                <a id="button2">
                                     <script>
                                     document.write(getCookie("button2"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -109,29 +111,29 @@
                     <br>
                     <h2><a href="http://47.93.113.113/portal/login.do" target="_blank">
                             <blockquote onclick="checkCookie('button3')" class="layui-elem-quote ">新版正式后台
-                                <div id="button3">
+                                <a id="button3">
                                     <script>
                                     document.write(getCookie("button3"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="http://101.200.172.198:3000/login" target="_blank">
                             <blockquote onclick="checkCookie('button4')" class="layui-elem-quote ">数据后台
-                                <div id="button4">
+                                <a id="button4">
                                     <script>
                                     document.write(getCookie("button4"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="http://112.126.93.149" target="_blank">
                             <blockquote onclick="checkCookie('button16')" class="layui-elem-quote ">用户数据后台
-                                <div id="button16">
+                                <a id="button16">
                                     <script>
                                     document.write(getCookie("button16"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -140,20 +142,20 @@
                     <br>
                     <h2><a href="https://business.oceanengine.com/" target="_blank">
                             <blockquote onclick="checkCookie('button5')" class="layui-elem-quote ">巨量引擎-巨量纵横
-                                <div id="button5">
+                                <a id="button5">
                                     <script>
                                     document.write(getCookie("button5"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://ad.e.kuaishou.com/index" target="_blank">
                             <blockquote onclick="checkCookie('button6')" class="layui-elem-quote ">磁力智投
-                                <div id="button6">
+                                <a id="button6">
                                     <script>
                                     document.write(getCookie("button6"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -164,20 +166,20 @@
                     <br>
                     <h2><a href="http://39.104.98.139/#/" target="_blank">
                             <blockquote onclick="checkCookie('button8')" class="layui-elem-quote ">热云素材观测
-                                <div id="button8">
+                                <a id="button8">
                                     <script>
                                     document.write(getCookie("button8"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://appgrowing-cn.youcloud.com/apps/promote" target="_blank">
                             <blockquote onclick="checkCookie('button13')" class="layui-elem-quote ">appgrowing
-                                <div id="button13">
+                                <a id="button13">
                                     <script>
                                     document.write(getCookie("button13"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -186,38 +188,38 @@
                     <br>
                     <h2><a href="https://www.runoob.com/" target="_blank">
                             <blockquote onclick="checkCookie('button14')" class="layui-elem-quote ">菜鸟教程
-                                <div id="button14">
+                                <a id="button14">
                                     <script>
                                     document.write(getCookie("button14"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://www.csdn.net/" target="_blank">
                             <blockquote onclick="checkCookie('button15')" class="layui-elem-quote ">csdn
-                                <div id="button15">
+                                <a id="button15">
                                     <script>
                                     document.write(getCookie("button15"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://github.com/" target="_blank">
                             <blockquote onclick="checkCookie('button10')" class="layui-elem-quote ">github
-                                <div id="button10">
+                                <a id="button10">
                                     <script>
                                     document.write(getCookie("button10"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://gitee.com/enterprises/?utm_source=pzpc" target="_blank">
                             <blockquote onclick="checkCookie('button17')" class="layui-elem-quote ">gittee
-                                <div id="button17">
+                                <a id="button17">
                                     <script>
                                     document.write(getCookie("button17"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -228,11 +230,11 @@
                     <br>
                     <h2><a href="https://app.toponad.com/m/dashboard" target="_blank">
                             <blockquote onclick="checkCookie('button9')" class="layui-elem-quote ">topon
-                                <div id="button9">
+                                <a id="button9">
                                     <script>
                                     document.write(getCookie("button9"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
@@ -241,29 +243,29 @@
                     <br>
                     <h2><a href="https://www.notion.so/dd2f1057161643a48157fd5e266e02bc" target="_blank">
                             <blockquote onclick="checkCookie('button7')" class="layui-elem-quote ">notion
-                                <div id="button7">
+                                <a id="button7">
                                     <script>
                                     document.write(getCookie("button7"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://www.google.com/" target="_blank">
                             <blockquote onclick="checkCookie('button11')" class="layui-elem-quote ">Google
-                                <div id="button11">
+                                <a id="button11">
                                     <script>
                                     document.write(getCookie("button11"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                     <h2><a href="https://chrome.google.com/webstore/category/extensions?hl=zh-CN" target="_blank">
                             <blockquote onclick="checkCookie('button12')" class="layui-elem-quote ">chrome插件
-                                <div id="button12">
+                                <a id="button12">
                                     <script>
                                     document.write(getCookie("button12"));
                                     </script>
-                                </div>
+                                </a>
                             </blockquote>
                         </a></h2>
                 </fieldset>
