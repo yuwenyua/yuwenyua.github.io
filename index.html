@@ -50,7 +50,8 @@
             x++;
             document.cookie = key + "=" + x;expires + "=" + date.toUTCString()
             document.getElementById(key).innerHTML = getCookie(key);
-            window.location.reload()；
+            // window.location.reload()；
+            
         } else { document.cookie = key + "=" + 1; }
 
 
