@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>daohang</title>
     <link href="./layui/css/layui.css" rel="stylesheet">
@@ -51,7 +53,10 @@
             document.cookie = key + "=" + x;expires + "=" + date.toUTCString()
             document.getElementById(key).innerHTML = getCookie(key);
             // window.location.reload()；
-            window.location=location;
+            // window.location=location;
+            // document.execCommand('Refresh')；
+            // window.document.execCommand('Refresh');
+
             
         } else { document.cookie = key + "=" + 1; }
 
