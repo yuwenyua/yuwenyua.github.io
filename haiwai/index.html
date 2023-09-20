@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<!--    <meta http-equiv="refresh" content="5">-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>daohang</title>
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+    #button1,
+    #button2,
+    #button3,
+    #button4,
+    #button5,
+    #button6,
+    #button7,
+    #button8,
+    #button9,
+    #button10,
+    #button11,
+    #button12,
+    #button13,
+    #button14,
+    #button15,
+    #button16,
+    #button17,
+    #button18,
+    #button19,
+    #button20,
+    #button21,
+        #button23,
+    #button22{
+        font-size: 50%;
+        color:rgb(95, 184, 120);
+    }
+    </style>
+    <script>
+    //拆分cookie      
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+        }
+        return "";
+    }
+
+    //保存，计算，初始化cookie
+    function checkCookie(key) {
+        if (Number(getCookie(key)) >= 1) {
+
+            var x = Number(getCookie(key));
+            var date = new Date();
+            date.setTime(date.getTime() + 2592000000);
+            x++;
+            document.cookie = key + "=" + x;expires + "=" + date.toUTCString()
+            document.getElementById(key).innerHTML = getCookie(key);
+            // window.location.reload()；
+            // window.location=location;
+            // document.execCommand('Refresh')；
+            // window.document.execCommand('Refresh');
+
+            
+        } else { document.cookie = key + "=" + 1; }
+
+
+    }
+    </script>
+</head>
+
+<body>
+    <script src="./layui/layui.js">
+    </script>
+    <script>
+    layui.use(['layer', 'form'], function() {
+        var layer = layui.layer;
+        var form = layui.form;
+
+        layer.msg("加载完成");
+    });
+    </script>
+    <!--  <div>
+        <ul class="layui-nav" style="margin: auto;width: 100%">
+            <li class="layui-nav-item" style="margin-left: 50%">
+
+                <div class="layui-anim site-desc">
+                    <p class="web-font-desc">
+                        首页
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4">
+                <!-- <div style="margin: auto;width:70%;"> -->
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;width: 70%;">
+                    <legend>海外应用</legend>
+                    <br>
+                    <h2><a href="https://play.google.com/store/apps/details?id=com.qrdroid.scan.sqpor" target="_blank">
+                            <blockquote onclick="checkCookie('button1')" class="layui-elem-quote ">QR Scanner Pro
+                                <a id="button1">
+                                    <script>
+                                    document.write(getCookie("button1"));
+                                    </script>
+                                    
+                                </a>
+                            </blockquote>
+                        </a></h2>
+                   
+                </fieldset>
+               
+
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
